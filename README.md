@@ -1,4 +1,4 @@
-## ¿Como Levantar Proyecto Front end? 🧐🧐🧐:
+## ¿Como Levantar Proyecto Back end? 🧐🧐🧐:
 
 
 <ul><li>Primero Clonar el repositorio , dejo por aca un pequeño video de como hacerlo :</li></ul>
@@ -14,7 +14,7 @@ npm install
 <ul><li>Luego ejecutar el siguiente comando para levantar el proyecto Front end:</li></ul>
 
 ``` bash
-npm install
+npm start
 ```
 
 
