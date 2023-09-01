@@ -1,12 +1,11 @@
 //- Model:
 import { Usuarios } from "../../Models/Carrito-Usuario-Compras/Usuarios-Carrito-Compras";
 
-const GetControllerUsuarios = async (email: string) => {
+const GetControllerUsuarios = async () => {
   try {
-    const response: any = await Usuarios.findOne({ where: { email } });
+    const response: any = await Usuarios.findAll();
     if (response) {
-      const { id, email, name } = response;
-      return { id, email, name };
+      return response;
     } else {
       throw new Error("Usuario No encontrado!!.");
     }

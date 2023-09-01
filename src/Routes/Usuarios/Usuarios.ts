@@ -9,10 +9,9 @@ const Usuarios = Router();
 //*--------------------------------------------RUTAS--------------------------------------------*//
 
 //- Otener Datos Usuario:
-Usuarios.get("/:name", async (req, res) => {
+Usuarios.get("/", async (req, res) => {
   try {
-    const { name } = req.params;
-    const response = await GetControllerUsuarios(name);
+    const response = await GetControllerUsuarios();
     res.status(200).json(response);
   } catch (error) {
     res.status(500).json(error);
