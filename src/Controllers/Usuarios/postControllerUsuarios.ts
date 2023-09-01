@@ -7,7 +7,7 @@ import Usuario from "../../Interface/Usuario/Usuario";
 const postControllerUsuarios = async (dataUsuario: any) => {
   try {
     const UsuarioEncontrado = await Usuarios.findOne({
-      where: { name: dataUsuario.name },
+      where: { email: dataUsuario.email },
     });
 
     if (UsuarioEncontrado) {

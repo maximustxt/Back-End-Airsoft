@@ -38,11 +38,9 @@ Mercado_Pago.post("/:idUser", async (req, res) => {
       picture_url: e.Imagen,
       unit_price: e.PrecioUnitario,
       currency_id: "USD", // La moneda en la que se cotiza el producto
-      description: e.Descripcion,
+      description: e.Name,
       quantity: e.Contador, // Agregar la cantidad deseada aquí
     }));
-
-    console.log(arrayProductos);
 
     //- Configurar la preferencia de MercadoPago
     const preference: any = {
