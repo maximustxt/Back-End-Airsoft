@@ -1,6 +1,6 @@
 import "reflect-metadata";
-import sequelize from "./DB";
-import app from "./serve";
+import sequelize from "./src/DB";
+import app from "./src/serve";
 
 sequelize
   .sync({ force: false, logging: false }) // logging : imprime o no imprime mensajes de registro.
