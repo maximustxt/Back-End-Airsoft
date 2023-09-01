@@ -15,4 +15,4 @@ npm install
 
 ## En Caso de no querer clonar y hacer todo el proceso dejo el deploy del proyecto completo :
 
-<https://front-end-airsoft.vercel.app/>
+<https://front-end-airsoft.vercel.app>
