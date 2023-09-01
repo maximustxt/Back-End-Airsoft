@@ -11,12 +11,14 @@
 npm install
 ```
 
-<ul><li>Luego ejecutar el siguiente comando para levantar el proyecto Front end:</li></ul>
+<ul><li>Luego ejecutar el siguiente comando para levantar el proyecto Back end:</li></ul>
 
 ``` bash
 npm start
 ```
 
+<br/>
+<br/>
 
 ## En Caso de no querer clonar y hacer todo el proceso dejo el deploy del proyecto completo 😉😉 :
 
