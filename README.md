@@ -1,5 +1,10 @@
 ## ¿Como Levantar Proyecto Front end? 🧐🧐🧐:
 
+
+<ul><li>Primero Clonar el repositorio , dejo por aca un pequeño video de como hacerlo :</li></ul>
+
+
+
 <ul><li>Primero levantar la terminal (CTL + J) y ejecutar el siguiente comando para instalar las dependencias y paquetes del proyecto :</li></ul>
 
 ``` bash
