@@ -1,18 +1,7 @@
 import { Model, DataTypes } from "sequelize";
 import sequelize from "../../DB";
 
-class Aviacion extends Model {
-  // public id?: number;
-  // public Imagen: string;
-  // public paisDeCreacion: string;
-  // public nombreDelvehiculo: string;
-  // public Historia: string;
-  // public Descripcion: string;
-  // public añosDeDesUso: string;
-  // public ConflictosENDondeParticipo: string[];
-  // public Imagenes: string[];
-  // public coloresDeCamuflaje: string[];
-}
+class Aviacion extends Model {}
 
 Aviacion.init(
   {

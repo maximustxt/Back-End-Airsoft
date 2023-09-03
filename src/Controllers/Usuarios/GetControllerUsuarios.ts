@@ -3,7 +3,7 @@ import { Usuarios } from "../../Models/Carrito-Usuario-Compras/Usuarios-Carrito-
 
 const GetControllerUsuarios = async () => {
   try {
-    const response: any = await Usuarios.findAll();
+    const response: Usuarios[] = await Usuarios.findAll();
     if (response) {
       return response;
     } else {

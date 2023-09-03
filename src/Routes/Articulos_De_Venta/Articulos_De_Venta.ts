@@ -44,8 +44,7 @@ Articulos_De_Venta.get("/Detail/:id", async (req, res) => {
 //- Eliminar:
 Articulos_De_Venta.delete("/Delete/:id", async (req, res) => {
   try {
-    const { id } = req.params;
-    const response = await DeleteControllerArticulos_De_Venta(id);
+    const response = await DeleteControllerArticulos_De_Venta();
     res.status(200).json(response);
   } catch (error: any) {
     res.status(500).json(error.message);

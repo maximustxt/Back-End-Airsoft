@@ -1,15 +1,7 @@
 import { Model, DataTypes } from "sequelize";
 import sequelize from "../../DB";
 
-class Historias_De_Guerra extends Model {
-  // public id?: number;
-  // public titulo: string;
-  // public Imagen: string;
-  // public paisDeCreacion: string;
-  // public Historia: string;
-  // public Descripcion: string;
-  // public Imagenes: string[];
-}
+class Historias_De_Guerra extends Model {}
 
 Historias_De_Guerra.init(
   {

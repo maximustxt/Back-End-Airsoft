@@ -6,8 +6,10 @@ import {
 
 //- Controller:
 import getControllerCarrito from "../../Controllers/Carrito/getControllerCarrito";
+//- Interfaces:
+import Carrito from "../../Interface/Carrito/Carrito";
 
-const postControllerCarrito = async (infoCarrito: any, idUser: string) => {
+const postControllerCarrito = async (infoCarrito: Carrito, idUser: string) => {
   try {
     // Verificar si el usuario existe
     const usuario = await Usuarios.findByPk(idUser);
@@ -23,8 +25,31 @@ const postControllerCarrito = async (infoCarrito: any, idUser: string) => {
     );
 
     if (!carritoYaCreado) {
+      const {
+        id,
+        Name,
+        Imagen,
+        Imagenes,
+        Precio,
+        Contador,
+        Stock,
+        Descripcion,
+        Tipo,
+        PrecioUnitario,
+      } = infoCarrito;
+
       // Crear un nuevo carrito
-      const carrito = await CarritoUser.create(infoCarrito);
+      const carrito = await CarritoUser.create({
+        Name,
+        Imagen,
+        Imagenes,
+        Precio,
+        Contador,
+        Stock,
+        Descripcion,
+        Tipo,
+        PrecioUnitario,
+      });
 
       // Agregar el carrito al usuario
       await usuario.addCarrito(carrito);

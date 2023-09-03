@@ -4,7 +4,7 @@ import { Usuarios } from "../../Models/Carrito-Usuario-Compras/Usuarios-Carrito-
 //- Interfaces:
 import Usuario from "../../Interface/Usuario/Usuario";
 
-const postControllerUsuarios = async (dataUsuario: any) => {
+const postControllerUsuarios = async (dataUsuario: Usuario) => {
   try {
     const UsuarioEncontrado = await Usuarios.findOne({
       where: { email: dataUsuario.email },
@@ -13,7 +13,8 @@ const postControllerUsuarios = async (dataUsuario: any) => {
     if (UsuarioEncontrado) {
       throw new Error("Usuario Ya existente!.");
     } else {
-      await Usuarios.create(dataUsuario);
+      const { name, email, password, ImagenUser } = dataUsuario;
+      await Usuarios.create({ name, email, password, ImagenUser });
       return "Usuario Posterado!.";
     }
   } catch (error: any) {

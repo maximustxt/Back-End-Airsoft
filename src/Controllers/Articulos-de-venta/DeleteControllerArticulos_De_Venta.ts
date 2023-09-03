@@ -1,7 +1,7 @@
 //- Model:
 import Articulos_Ventas from "../../Models/Articulos_Venta_Model/Articulos_Venta_Model";
 
-const DeleteControllerArticulos_De_Venta = async (id: string) => {
+const DeleteControllerArticulos_De_Venta = async () => {
   try {
     await Articulos_Ventas.destroy({
       where: {}, // Sin condición, eliminará todo.

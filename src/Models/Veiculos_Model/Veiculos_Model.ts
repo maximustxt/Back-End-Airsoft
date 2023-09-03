@@ -1,18 +1,7 @@
 import { Model, DataTypes } from "sequelize";
 import sequelize from "../../DB";
 
-class Vehiculos_Terrestres extends Model {
-  // public id?: number;
-  // public Imagen: string;
-  // public paisesQueLaUsaron: string[];
-  // public paisDeCreacion: string;
-  // public nombreDelvehiculo: string;
-  // public Historia: string;
-  // public Descripcion: string;
-  // public añosDeDesUso: string;
-  // public ConflictosENDondeParticipo: string[];
-  // public Imagenes: string[];
-}
+class Vehiculos_Terrestres extends Model {}
 
 Vehiculos_Terrestres.init(
   {

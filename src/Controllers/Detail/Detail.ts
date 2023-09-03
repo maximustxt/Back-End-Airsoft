@@ -6,7 +6,6 @@ import GetControllerArmas_De_Guerra from "../Armas/GetControllerArmas_De_Guerra"
 import GetControllerVeiculos_De_Guerra from "../Vehiculos/GetControllerVeiculos_De_Guerra";
 
 const GetDetailControllerDetail = async (id: string) => {
-  console.log(id);
   try {
     const Cañones = await GetControllerCañones_De_Guerra();
     const Barcos = await GetControllerBarcos_Submarinos_De_Guerra();

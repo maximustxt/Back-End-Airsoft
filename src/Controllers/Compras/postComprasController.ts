@@ -5,8 +5,10 @@ import {
 } from "../../Models/Carrito-Usuario-Compras/Usuarios-Carrito-Compras";
 //- Controllers:
 import getComprasController from "../../Controllers/Compras/getComprasController";
+//- interfaces:
+import Compra from "../../Interface/Compras/Compras";
 
-const postComprasController = async (idUser: string, InfoCompra: any) => {
+const postComprasController = async (idUser: string, InfoCompra: Compra) => {
   try {
     const user = await Usuarios.findByPk(idUser);
 
@@ -15,8 +17,10 @@ const postComprasController = async (idUser: string, InfoCompra: any) => {
     } else {
       const arrayDeComprasUser = await getComprasController(idUser);
 
+      const { Name } = InfoCompra;
+
       const compraYaCreada = arrayDeComprasUser.find(
-        (e: any) => e.Name === InfoCompra.Name
+        (e: any) => e.Name === Name
       );
 
       if (!compraYaCreada) {

@@ -1,4 +1,4 @@
-export default interface Aviaciones {
+export default interface Vehiculo {
   Imagen: string;
   paisesQueLaUsaron: string[];
   paisDeCreacion: string;
@@ -8,5 +8,4 @@ export default interface Aviaciones {
   añosDeDesUso: string;
   ConflictosENDondeParticipo: string[];
   Imagenes: string[];
-  coloresDeCamuflaje: string[];
 }

@@ -2,7 +2,8 @@ import express, { json } from "express";
 import cors from "cors";
 import morgan from "morgan";
 
-//- Routes:
+//*- Routes:
+
 import Armas_De_Guerra from "./Routes/Armas_De_Guerra/Armas_De_Guerra";
 import Articulos_De_Venta from "./Routes/Articulos_De_Venta/Articulos_De_Venta";
 import Aviacion_De_Guerra from "./Routes/Aviacion_De_Guerra/Aviacion_De_Guerra";
@@ -17,15 +18,18 @@ import Mercado_Pago from "./Routes/Mercado_Pago/Mercado_Pago";
 import Contador from "./Routes/Carrito/Contador/Contador";
 import Compras from "./Routes/Compras/Compras";
 
-//- Instance:
+//*- Instance:
+
 const app = express();
 
-//- Mildwares:
+//*- Mildwares:
+
 app.use(cors());
 app.use(morgan("dev"));
 app.use(json());
 
-//- Rutas:
+//*- Rutas:
+
 app.use("/Historias-De-Guerra", Historias_De_Guerra);
 app.use("/Veiculos_De_Guerra", Veiculos_De_Guerra);
 app.use("/Aviones_De_Combate", Aviacion_De_Guerra);

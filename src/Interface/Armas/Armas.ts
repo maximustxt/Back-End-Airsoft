@@ -1,5 +1,4 @@
 export default interface Arma {
-  id: number;
   Imagen: string;
   Imagenes: string[];
   paisesQueLaUsaron: string[];

@@ -1,7 +1,9 @@
 //- Model:
 import Barcos from "../../Models/Barcos_Model/Barcos_Model";
+//- Interfaces:
+import Barco from "../../Interface/Barcos/Barcos";
 
-const postControllerBarcos_Submarinos_De_Guerra = async (Info: any) => {
+const postControllerBarcos_Submarinos_De_Guerra = async (Info: Barco) => {
   try {
     const response = await Barcos.findOne({
       where: { nombreDelvehiculo: Info.nombreDelvehiculo },
@@ -10,7 +12,29 @@ const postControllerBarcos_Submarinos_De_Guerra = async (Info: any) => {
     if (response) {
       throw new Error("Barco ya creado");
     } else {
-      await Barcos.create(Info);
+      const {
+        Imagen,
+        paisesQueLaUsaron,
+        paisDeCreacion,
+        nombreDelvehiculo,
+        Historia,
+        Descripcion,
+        añosDeDesUso,
+        ConflictosENDondeParticipo,
+        Imagenes,
+      } = Info;
+
+      await Barcos.create({
+        Imagen,
+        paisesQueLaUsaron,
+        paisDeCreacion,
+        nombreDelvehiculo,
+        Historia,
+        Descripcion,
+        añosDeDesUso,
+        ConflictosENDondeParticipo,
+        Imagenes,
+      });
       return "Barco Creado con exito!.";
     }
   } catch (error: any) {
