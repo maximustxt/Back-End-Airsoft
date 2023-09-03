@@ -27,7 +27,6 @@ const postControllerCarrito = async (infoCarrito: any, idUser: string) => {
     if (!carritoYaCreado) {
       // Crear un nuevo carrito
       const carrito = await CarritoUser.create();
-
       // Agregar el carrito al usuario
       await usuario.addCarrito(carrito);
     } else {
