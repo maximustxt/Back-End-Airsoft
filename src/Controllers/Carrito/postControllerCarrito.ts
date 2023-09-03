@@ -26,7 +26,6 @@ const postControllerCarrito = async (infoCarrito: Carrito, idUser: string) => {
 
     if (!carritoYaCreado) {
       const {
-        id,
         Name,
         Imagen,
         Imagenes,
