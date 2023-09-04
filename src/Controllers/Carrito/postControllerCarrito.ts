@@ -9,7 +9,20 @@ import getControllerCarrito from "../../Controllers/Carrito/getControllerCarrito
 //- Interfaces:
 import Carrito from "../../Interface/Carrito/Carrito";
 
-const postControllerCarrito = async (infoCarrito: any, idUser: string) => {
+const postControllerCarrito = async (
+  infoCarrito: {
+    Name: string;
+    Contador: number;
+    Descripcion: string;
+    Tipo: string;
+    Precio: number;
+    PrecioUnitario: number;
+    Imagenes: string[];
+    Imagen: string;
+    Stock: number;
+  },
+  idUser: string
+) => {
   try {
     // Verificar si el usuario existe
     const usuario = await Usuarios.findByPk(idUser);
