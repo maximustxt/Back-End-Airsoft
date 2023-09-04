@@ -7,10 +7,10 @@ import {
 //- Controller:
 import getControllerCarrito from "../../Controllers/Carrito/getControllerCarrito";
 //- Interfaces:
-import Carrito from "../../Interface/Carrito/Carrito";
 
 const postControllerCarrito = async (
   infoCarrito: {
+    id: string;
     Name: string;
     Contador: number;
     Descripcion: string;
@@ -39,7 +39,7 @@ const postControllerCarrito = async (
 
     if (!carritoYaCreado) {
       // Crear un nuevo carrito
-      const carrito = await CarritoUser.create();
+      const carrito = await CarritoUser.create(infoCarrito);
       // Agregar el carrito al usuario
       await usuario.addCarrito(carrito);
     } else {

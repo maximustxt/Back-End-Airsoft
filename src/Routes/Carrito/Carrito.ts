@@ -59,6 +59,7 @@ Carritos.post("/:idUser", async (req, res) => {
       res.status(404).json("Faltan Datos Del Carrito");
     } else {
       const {
+        id,
         Name,
         Contador,
         Descripcion,
@@ -69,8 +70,10 @@ Carritos.post("/:idUser", async (req, res) => {
         Imagen,
         Stock,
       } = req.body;
+
       const response = await postControllerCarrito(
         {
+          id,
           Name,
           Contador,
           Descripcion,
